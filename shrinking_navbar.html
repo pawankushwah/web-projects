@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrinking Navigation Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .navbar {
+            background-color: rgb(14, 228, 128);
+            display: flex;
+            height: fit-content;
+            width: 100vw;
+            justify-content: space-around;
+            align-items: center;
+            font-size: xx-large;
+            font-weight: bold;
+            overflow: hidden;
+            position: fixed;
+            padding: 2rem 1rem;
+            transition: padding 0.4s ease-in-out, font-size 0.4s ease-in-out, background-color 0.4s ease-in-out;
+            color: white;
+        }
+        
+        .links a {
+            margin-right: 2rem;
+            padding: 2rem;
+            color: white;
+        }
+        
+        .links a:hover {
+            background-color: rgb(24, 87, 224);
+            color: white;
+        }
+        .home{
+            height: 200vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            background: linear-gradient(#14e036, #4976f1);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="">CodingWithPawan</a>
+        <div class="links">
+            <a href="#home" class="active">Home</a>
+            <a href="#home">Blog</a>
+            <a href="#home">Images</a>
+            <a href="#home">Contact</a>
+            <a href="#home">About Us</a>
+        </div>
+    </nav>
+    <a href="#home" class="home">Home</a>
+</body>
+
+<script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function () { 
+        scrollFunction() 
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.querySelector(".navbar").style.padding = "2rem 0";
+            document.querySelector(".navbar").style.fontSize = "x-large";
+            document.querySelector(".links a").style.padding = "0.5rem";
+            document.querySelector(".navbar").style.backgroundColor = "#4976f1";
+        }
+        else{
+            document.querySelector(".navbar").style.padding = "2rem 1rem";
+            document.querySelector(".navbar").style.fontSize = "xx-large";
+            document.querySelector(".links a").style.padding = "2rem";
+            document.querySelector(".navbar").style.backgroundColor = "rgb(14, 228, 128)";
+        }
+    }
+</script>
+
+</html>
