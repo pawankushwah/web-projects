@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <title>Group Chat App</title>
+</head>
+<body class="box-border font-comfortaa">
+    <div class="w-screen h-screen flex flex-col justify-center items-center bg-green-300">
+        <div class="title font-bold text-3xl">Chat App</div>
+        <div class="container w-1/2 h-5/6 rounded-lg bg-green-400 p-4">
+            <ul class="w-full" id="messageContainer">
+                <li class="chat chat-start text-left p-2">
+                    <div class="chat-bubble">Hello world!</div>
+                </li>
+                <li class="chat chat-end text-left p-2">
+                    <div class="chat-bubble">Hello world!</div>
+                </li>
+                <li class="chat chat-start text-left p-2">
+                    <div class="chat-bubble">Hello world!</div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-1/2">
+
+            <form action="" id="form" class="flex flex-col justify-between w-full space-x-1 py-4">
+                <div class="flex justify-between w-full space-x-1 py-1">
+                    <input type="text" placeholder="Enter your Message" id="messageInput" class="p-2 w-full rounded-md outline-1 outline-blue-500">
+                    <button type="submit" id="messageButton" class="bg-orange-500 rounded-md p-2 text-white">Send</button>
+                </div>
+
+                <div class="flex justify-between w-full space-x-1 py-1">
+                    <input type="text" placeholder="Enter your Room Id" id="roomInput" class="p-2 w-full rounded-md outline-1 outline-blue-500">
+                    <button type="button" id="roomButton" class="bg-orange-500 rounded-md p-2 text-white">Join</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
