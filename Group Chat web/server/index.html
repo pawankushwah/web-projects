@@ -8,18 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
-    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="http://localhost:5174/socket.io/socket.io.js"></script>
     <script defer src="script.js"></script>
     <title>Group Chat App</title>
 </head>
 <body class="box-border font-comfortaa">
     <div class="w-screen h-screen flex flex-col justify-center items-center bg-green-300">
         <div class="title font-bold text-3xl">Chat App</div>
-        <div class="container w-1/2 h-5/6 rounded-lg bg-green-400 p-4 overflow-auto">
-            <ul class="w-full" id="messageContainer">
-                <!-- <li class="chat chat-end p-2"><div class="chat-bubble">hello</div></li> -->
-                
-            </ul>
+        <div class="container w-1/2 h-5/6 rounded-lg bg-green-400 p-4">
+            <ul class="w-full" id="messageContainer"></ul>
         </div>
         <div class="w-1/2">
 
